@@ -22,5 +22,38 @@
  Create messageController function,import it new messageRoutes, then import messageRoutes in server.js
  Import cookieparser in server, and complete middleware/protectRoute.js, use middleware in both messageRoutes and userRoutes
  middleware used for verification, mainly it sets the value req.user = user from the token
- 
- 
+ create usercontroller and import in userRoutes
+
+ backend complete
+ .
+ .
+ .
+ frontend process:
+ now create npm create vite@latest
+ install tailwind css (tailwindcss vite install gsearch)
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p 
+change config.js and index.css in src
+explore https://daisyui.com/ : The most popular component library for Tailwind CSS
+ Install daisyUI : npm i -D daisyui@latest
+ add plugin in config.js   plugins: [ require('daisyui'),]
+ delete app.css
+ create pages and component folder in src
+ create home login signup folder in pages and jsx file respectively
+ create public folder and inser bg
+ now import background in index.css
+ check tailwindcss glass morphism to blur bg
+ create login page
+ create signup page with GenderCheckBox.jsx
+ create sidebar folder along with jsx in component
+ import sidebar in home.jsx
+ create searchInput.jsx
+ import it in sidebar then import sidebar in home and home in app
+ install react icons from https://react-icons.github.io/react-icons/  and run npm install react-icons --save
+ import searchicon in searchInput
+ create Conversation.jsx in sidebar
+ create logout btn sidebar
+ create messages folder then MessageContainer,Messages, Message and Message input 
+ update index.css for scrollbar
+ complete UI Design
+
