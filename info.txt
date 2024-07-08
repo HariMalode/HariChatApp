@@ -57,3 +57,37 @@ explore https://daisyui.com/ : The most popular component library for Tailwind C
  update index.css for scrollbar
  complete UI Design
 
+ Functionality Add:
+ npm i react-router-dom
+ ctrl+shift+p to reload vs code
+ Wrap tha app compo in browserrouter
+ make the route and routes for home,login.signup
+ change port to 3000 in vite.config
+ <Link to={'/login'} in signup page to change page and same in login page
+ complete handlesubmit function in signup
+ make hooks folder for hooks
+ npm i react-hot-toast for toasting message and add hook to verify input data(Gsearch)
+ add <Toaster/> in app (Make sure it's placed at the top)
+ complete signup function in hooks
+ Create context folder and authcontext so that we can use some props over the project
+ Wrap app in <AuthContextProvider>
+ set localstorage for chat-user
+ now in app, if authuser exist navigation to home and else to login
+ create useLogout hook and import it in logoutbtn
+
+ In login page make handlesubmit function and create uselogin hook
+ complete uselogin hook and login page, after verification of data page must be redirected to home
+
+ now part of getconversation, use zustand,provide the global state that we can use throughout the project
+ npm install zustand
+ create zustand folder and useConversation.js
+ cretae useGetConversations.js hook
+ update Conversations.jsx sidebar
+ create utils/emojis.js for emoji
+ update Conversation.jsx sidebar
+ update MessageContainer for selected chat and logged user
+ create useSendMessage.js hook and import it in MessageInput
+ create useGetMessage.js hook and import it in Messages
+ create messageSkeleton to show it while loading
+ update messages.jsx
+create extractTime.js in utils and import in message
