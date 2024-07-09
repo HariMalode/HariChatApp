@@ -91,3 +91,5 @@ explore https://daisyui.com/ : The most popular component library for Tailwind C
  create messageSkeleton to show it while loading
  update messages.jsx
 create extractTime.js in utils and import in message
+update messages.jsx to shift scrobar to recent msg
+update searchInput to search user and shift the chat respectively
