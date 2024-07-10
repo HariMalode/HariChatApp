@@ -1,5 +1,6 @@
 import Message from "../models/messageModel.js"
 import Conversation from "../models/conversationModel.js"
+import { getReceiverSocketId ,io} from "../socket/socket.js"
 
 
 export const sendMessage = async(req, res) => {
@@ -26,6 +27,13 @@ export const sendMessage = async(req, res) => {
     
     // this will run in parallel
     await Promise.all([conversation.save(), newMessage.save()])
+
+    // SOCKET IO FUNCTIONALITY to send the live message updates 
+	const receiverSocketId = getReceiverSocketId(receiverId);
+	if (receiverSocketId) {
+		// io.to(<socket_id>).emit() used to send events to specific client
+		io.to(receiverSocketId).emit("newMessage", newMessage);
+	}
 
     res.status(201).json(newMessage)
 

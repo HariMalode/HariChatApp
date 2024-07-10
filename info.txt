@@ -93,3 +93,20 @@ explore https://daisyui.com/ : The most popular component library for Tailwind C
 create extractTime.js in utils and import in message
 update messages.jsx to shift scrobar to recent msg
 update searchInput to search user and shift the chat respectively
+
+now we able to send, receive and store msg in db but at a same time msg not updated at receiver we have to refresh page
+thats why we will use socket
+now create socket server at the top of express server in backend
+create socket folder and socket.js
+update server.js 
+
+now in frontend too, create socketContext.js in context folder
+wrap app in socketcontext in main.jsx
+npm i socket.io-client
+update server and socket and context
+import socketContext in sidebar to get online users
+update messageController to maintain the updates for live messaging
+it is used to send event
+now create useListenMessages.js to listen events of live msg
+add notification sound in assest frontend and import it in useListenMessages()
+and import useListenMessages in messages.jsx

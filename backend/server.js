@@ -7,9 +7,9 @@ import messageRoutes from './routes/messageRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 
 import connectMongoDB from './db/connectMongoDB.js';
+import { app, server } from './socket/socket.js';
 
 
-const app = express();
 dotenv.config();
 const PORT = process.env.PORT || 4000;
 
@@ -20,7 +20,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/messages', messageRoutes)
 app.use('/api/users', userRoutes)
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   connectMongoDB();
   console.log(`Chat app listening on port ${PORT}!`);
 });
